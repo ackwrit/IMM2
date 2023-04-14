@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "chainsaw-man-power-with-swords-pzj6bfmmazq9n0sb-pzj6bfmmazq9n0sb.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
