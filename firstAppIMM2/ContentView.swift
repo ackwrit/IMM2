@@ -8,14 +8,50 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isPresent = false
     var body: some View {
+        
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            HStack {
+                Image("chainsaw")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .clipShape(Circle())
+                .frame(width: 150,height: 150)
+                .padding()
+                Text("Chainsaw Man")
+                    .bold()
+                    .foregroundColor(.red)
+                    .font(.largeTitle)
+                    .multilineTextAlignment(.center)
+                Spacer()
+            }
+            
+            .background(.gray)
+            .cornerRadius(25)
+            .padding()
+            
+            
+            
+            Spacer()
+            
+            Button("Valider") {
+                //action
+                self.isPresent.toggle()
+                
+            }
+            Spacer()
         }
-        .padding()
+        .background(
+            Image("cowboy")
+                .resizable()
+                .ignoresSafeArea(.all)
+        )
+        .sheet(isPresented: $isPresent) {
+            RegisterPage()
+        }
+        
+        
     }
 }
 

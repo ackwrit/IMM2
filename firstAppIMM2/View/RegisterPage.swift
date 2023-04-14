@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct RegisterPage: View {
+    @State var mail = ""
+    @State var password = ""
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            TextField("Entrer votre mail", text: $mail)
+                .textFieldStyle(.roundedBorder)
+            
+            SecureField("Entrer votre mot de passe", text: $password)
+                .textFieldStyle(.roundedBorder)
+            
+            Button("Inscription") {
+                //
+            }
+        }
+        .padding(.all,10)
     }
 }
 

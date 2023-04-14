@@ -6,3 +6,10 @@
 //
 
 import Foundation
+import Firebase
+
+class AuthViewModel : ObservableObject {
+    @Published var isAuth : Bool = false
+    @Published var isFinishConnecting : Bool = false
+    
+}
